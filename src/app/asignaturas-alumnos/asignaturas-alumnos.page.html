@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <a [routerLink]="['/menu-alumno']">
+        <img src="assets/icon/Logo_DuocUC.svg.png" alt="Logo" style="height: 30px; width: auto;" />
+      </a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-menu side="end" menuId="myMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+    
+      <ion-item routerLink="/asignaturas-alumnos">Mis Asignaturas</ion-item>
+      <ion-item routerLink="/asistencias-alumnos">Mis Asistencias</ion-item>
+      <ion-item routerLink="/cambiar-clave">Cambiar Contraseña</ion-item>
+      <ion-button (click)="logOutAlumno()" fill="clear" color="" slot="end">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar sesion
+      </ion-button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+
+<ion-content id="main-content" class="ion-padding">
+  <ion-grid class="content-grid">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <ion-col size="12" size-md="8" class="ion-text-center">
+        <h1>Asignaturas Del Estudiante</h1>
+
+        <div *ngIf="subjectsWithDetails.length > 0; else noSubjects">
+          <ion-card *ngFor="let subject of subjectsWithDetails" style="margin-bottom: 16px;">
+            <ion-card-content>
+              <ion-item>
+                <ion-label>
+                  <strong>{{ subject.nombre }}</strong><br />
+                  <ion-text>{{ subject.codigo }}</ion-text><br />
+                </ion-label>
+              </ion-item>
+
+              <div *ngIf="subject.secciones && subject.secciones.length > 0">
+                <ion-item lines="none" *ngFor="let seccion of subject.secciones">
+                  <ion-label>
+                    <p><strong>Código de sección:</strong> {{ seccion.codigo_seccion }}</p>
+                    <ion-note color="medium">
+                      <p><strong>Horario:</strong></p>
+                      <ul>
+                        <li *ngFor="let horario of seccion.horario">
+                          {{ horario.dia }} de {{ horario.inicio }} a {{ horario.fin }}
+                        </li>
+                      </ul>
+                    </ion-note>
+                  </ion-label>
+                </ion-item>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+
+        <ng-template #noSubjects>
+          <p>No se encontraron asignaturas para mostrar.</p>
+        </ng-template>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

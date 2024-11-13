@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <a [routerLink]="['/menu-profesor']">
+        <img src="assets/icon/Logo_DuocUC.svg.png" alt="Logo" style="height: 30px; width: auto;" />
+      </a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()"> <!-- Abre o cierra el menú -->
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-menu side="end" menuId="myMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item routerLink="/asignatura-profesor">Mis Asignaturas</ion-item>
+      <ion-item routerLink="/asistencia-profesor">Mis Asistencias</ion-item>
+      <ion-item routerLink="/cambiar-clave-profesor">Cambiar Contraseña</ion-item>
+      <ion-button (click)="logOutProfesor()" fill="clear" color="" slot="end">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar sesión
+      </ion-button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Registrar Asistencia</ion-title>
+    <ion-button expand="block" fill="clear" slot="end" color="" [routerLink]="'/menu-profesor'">
+      <ion-icon name="checkmark-circle-outline"></ion-icon>&nbsp;Cerrar Asistencia
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content id="main-content" [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-justify-content-center ion-align-items-center" style="height: 15vh;">
+      <!-- Espaciado entre el rango y el campo de selección de sección -->
+      <ion-col size="6" style="margin-bottom: 20px;">
+        <ion-range min="300" max="1000" step="10" [(ngModel)]="qrSize" (ionChange)="onRangeChange($event)" aria-label="Tamaño QR"></ion-range>
+      </ion-col>
+
+      <ion-col size="2" style="margin-bottom: 20px;">
+        <ion-item>
+          <ion-select label="Seleccionar seccion" label-placement="floating" fill="outline" [(ngModel)]="selectedSection" (ionChange)="onSectionChange()">
+            <ion-select-option *ngFor="let seccion of secciones" [value]="seccion">{{ seccion }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="auto">
+        <qr-code [value]="qrValue" [size]="qrSize" errorCorrectionLevel="M"></qr-code>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

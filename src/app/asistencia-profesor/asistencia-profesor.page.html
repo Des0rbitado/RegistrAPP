@@ -1,0 +1,167 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <a [routerLink]="['/menu-profesor']">
+        <img src="assets/icon/Logo_DuocUC.svg.png" alt="Logo" style="height: 30px; width: auto;" />
+      </a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+<ion-content class="ion-padding">
+  <ion-menu side="end" menuId="myMenu" contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        
+        <ion-item routerLink="/asignatura-profesor">Mis Asignaturas</ion-item>
+        <ion-item routerLink="/asistencia-profesor">Mis Asistencias</ion-item>
+
+        <ion-item routerLink="/cambiar-clave-profesor">Cambiar Contraseña</ion-item>
+        <ion-button (click)="logOutAlumno()" fill="clear" color="" slot="end">
+          <ion-icon name="log-out-outline"></ion-icon>
+          Cerrar sesion
+        </ion-button>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+
+
+
+
+
+
+
+
+<div class="ion-page" id="main-content">
+  
+
+  <ion-content class="ion-padding">
+    <ion-accordion-group>
+      <ion-accordion>
+        <ion-item slot="header">
+          <ion-label>PGY4121_002D</ion-label>
+          <ion-label slot="end">25/09</ion-label>
+        </ion-item>
+        <div slot="content">
+          <ion-list>
+            <ion-item>
+              <ion-label>10 Alumnos De 38</ion-label>
+              <ion-label slot="end">26.32%</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Juan Pérez González</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>María González López</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Pedro López Fernández</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Ana Torres Martínez</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Felipe Rodríguez Silva</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Carla Martínez Castro</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Javier Silva Morales</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Laura Fernández Ríos</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Nicolás Herrera Salazar</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sofía Castro Díaz</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-accordion>
+  
+      <ion-accordion>
+        <ion-item slot="header">
+          <ion-label>PGY4121_003D</ion-label>
+          <ion-label slot="end">25/09</ion-label>
+        </ion-item>
+        <div slot="content">
+          <ion-list>
+            <ion-item>
+              <ion-label>10 Alumnos De 38</ion-label>
+              <ion-label slot="end">26.32%</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Juan Pérez González</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>María González López</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Pedro López Fernández</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Ana Torres Martínez</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Felipe Rodríguez Silva</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Carla Martínez Castro</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Javier Silva Morales</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Laura Fernández Ríos</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Nicolás Herrera Salazar</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>Sofía Castro Díaz</ion-label>
+              <ion-label slot="end">Presente</ion-label>
+            </ion-item>
+          </ion-list>
+        </div>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-content>
+</div>

@@ -1,0 +1,367 @@
+{
+  "alumnos": [
+    {
+      "id": "1",
+      "nombre": "Carlos",
+      "apellidos": "López",
+      "correo": "carlos.lopez@example.com",
+      "contraseña": "securepass1",
+      "asignaturas": [
+        "MAT4140_002",
+        "FIS3150_001"
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Ana",
+      "apellidos": "Gómez",
+      "correo": "ana.gomez@example.com",
+      "contraseña": "password4567",
+      "asignaturas": [
+        "MAT4140_003",
+        "FIS3150_002"
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "Luis",
+      "apellidos": "Ramírez",
+      "correo": "luis.ramirez@example.com",
+      "contraseña": "password789",
+      "asignaturas": [
+        "MAT4140_001",
+        "BIO2100_001"
+      ]
+    },
+    {
+      "id": "4",
+      "nombre": "Marta",
+      "apellidos": "Silva",
+      "correo": "marta.silva@example.com",
+      "contraseña": "password101",
+      "asignaturas": [
+        "BIO2100_001",
+        "FIS3150_001"
+      ]
+    },
+    {
+      "id": "5",
+      "nombre": "Carlos",
+      "apellidos": "Lara",
+      "correo": "carlos.lara@example.com",
+      "contraseña": "password202",
+      "asignaturas": [
+        "MAT4140_003",
+        "FIS3150_002"
+      ]
+    }
+  ],
+  "profesores": [
+    {
+      "id": "1",
+      "nombre": "Carlos",
+      "apellidos": "López",
+      "correo": "carlos.lopez@example.com",
+      "contraseña": "securepass1",
+      "asignaturas": [
+        "MAT4140_002",
+        "FIS3150_001"
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Marta",
+      "apellidos": "Díaz",
+      "correo": "marta.diaz@example.com",
+      "contraseña": "anotherpass",
+      "asignaturas": [
+        "MAT4140_003",
+        "FIS3150_002"
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "José",
+      "apellidos": "García",
+      "correo": "jose.garcia@example.com",
+      "contraseña": "passw0rd",
+      "asignaturas": [
+        "BIO2100_001",
+        "MAT4140_001"
+      ]
+    },
+    {
+      "id": "4",
+      "nombre": "Lucía",
+      "apellidos": "Ortega",
+      "correo": "lucia.ortega@example.com",
+      "contraseña": "mypassword",
+      "asignaturas": [
+        "MAT4140_001"
+      ]
+    },
+    {
+      "id": "5",
+      "nombre": "Miguel",
+      "apellidos": "Ríos",
+      "correo": "miguel.rios@example.com",
+      "contraseña": "pass1234",
+      "asignaturas": [
+        "FIS3150_001",
+        "FIS3150_002"
+      ]
+    }
+  ],
+  "asignaturas": [
+    {
+      "id": "MAT4140",
+      "nombre": "Matemáticas Avanzadas",
+      "secciones": [
+        {
+          "codigo_seccion": "MAT4140_001",
+          "profesor_id": 3,
+          "horario": [
+            {
+              "dia": "Lunes",
+              "inicio": "10:00",
+              "fin": "12:00"
+            },
+            {
+              "dia": "Miércoles",
+              "inicio": "10:00",
+              "fin": "12:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            3,
+            4
+          ]
+        },
+        {
+          "codigo_seccion": "MAT4140_002",
+          "profesor_id": 1,
+          "horario": [
+            {
+              "dia": "Martes",
+              "inicio": "14:00",
+              "fin": "16:00"
+            },
+            {
+              "dia": "Jueves",
+              "inicio": "14:00",
+              "fin": "16:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            1
+          ]
+        },
+        {
+          "codigo_seccion": "MAT4140_003",
+          "profesor_id": 2,
+          "horario": [
+            {
+              "dia": "Viernes",
+              "inicio": "08:00",
+              "fin": "10:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FIS3150",
+      "nombre": "Física Avanzada",
+      "secciones": [
+        {
+          "codigo_seccion": "FIS3150_001",
+          "profesor_id": 1,
+          "horario": [
+            {
+              "dia": "Lunes",
+              "inicio": "08:00",
+              "fin": "10:00"
+            },
+            {
+              "dia": "Miércoles",
+              "inicio": "08:00",
+              "fin": "10:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            1,
+            4
+          ]
+        },
+        {
+          "codigo_seccion": "FIS3150_002",
+          "profesor_id": 2,
+          "horario": [
+            {
+              "dia": "Martes",
+              "inicio": "16:00",
+              "fin": "18:00"
+            },
+            {
+              "dia": "Jueves",
+              "inicio": "16:00",
+              "fin": "18:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            2,
+            5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "BIO2100",
+      "nombre": "Biología Molecular",
+      "secciones": [
+        {
+          "codigo_seccion": "BIO2100_001",
+          "profesor_id": 3,
+          "horario": [
+            {
+              "dia": "Lunes",
+              "inicio": "12:00",
+              "fin": "14:00"
+            },
+            {
+              "dia": "Miércoles",
+              "inicio": "12:00",
+              "fin": "14:00"
+            }
+          ],
+          "alumnos_inscritos": [
+            3,
+            4
+          ]
+        }
+      ]
+    }
+  ],
+  "asistencias": [
+    {
+      "id": "1",
+      "alumno_id": "1",
+      "nombre_asignatura": "Estadística Descriptiva",
+      "codigo_seccion": "MAT4140_002",
+      "asistencias": [
+        {
+          "fecha": "24/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "25/11/2024",
+          "estado": "ausente"
+        },
+        {
+          "fecha": "12/12/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "11/10/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "10/10/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "12/12/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "07/11/2024",
+          "estado": "presente"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "alumno_id": "1",
+      "nombre_asignatura": "Física Avanzada",
+      "codigo_seccion": "FIS3150_001",
+      "asistencias": [
+        {
+          "fecha": "24/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "25/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "11/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "11/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "11/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "11/11/2024",
+          "estado": "presente"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "alumno_id": "2",
+      "nombre_asignatura": "Física Avanzada",
+      "codigo_seccion": "FIS3150_001",
+      "asistencias": [
+        {
+          "fecha": "24/11/2024",
+          "estado": "presente"
+        },
+        {
+          "fecha": "25/11/2024",
+          "estado": "presente"
+        }
+      ]
+    },
+    {
+      "id": "0bc2",
+      "alumno_id": "2",
+      "nombre_asignatura": "Nombre de la asignatura",
+      "codigo_seccion": "MAT4140_003",
+      "asistencias": [
+        {
+          "fecha": "11/11/2024",
+          "estado": "presente"
+        }
+      ]
+    }
+  ]
+}

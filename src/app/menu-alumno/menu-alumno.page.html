@@ -1,0 +1,144 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <a [routerLink]="['/menu-alumno']">
+        <img src="assets/icon/Logo_DuocUC.svg.png" alt="Logo" style="height: 30px; width: auto;" />
+      </a>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()">
+        <ion-icon name="menu"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+
+
+
+
+
+
+<ion-menu side="end" menuId="myMenu" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+    
+      <ion-item routerLink="/asignaturas-alumnos">Mis Asignaturas</ion-item>
+      <ion-item routerLink="/asistencias-alumnos">Mis Asistencias</ion-item>
+      <ion-item routerLink="/cambiar-clave">Cambiar Contraseña</ion-item>
+      <ion-button (click)="logOutAlumno()" fill="clear" color="" slot="end">
+        <ion-icon name="log-out-outline"></ion-icon>
+        Cerrar sesion
+      </ion-button>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="toggleMenu()">
+          <ion-icon name="menu"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+
+      <ion-title>
+        <a [routerLink]="['/home-estudiante']">
+          <img src="assets/icon/Logo_DuocUC.svg.png" alt="Logo" style="height: 30px; width: auto;" />
+        </a>
+      </ion-title>
+
+      <ion-buttons slot="end"></ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding home-container">
+    <!-- Mensaje de bienvenida centrado -->
+    <div class="welcome-message ion-text-center">
+      <h2>¡Bienvenido, {{ welcomeMessage }}!</h2>
+    </div>
+
+    <!-- Texto sin fondo, solo el mensaje descriptivo -->
+    <div class="notification-banner ion-text-center">
+      <p>Estás en la sección de estudiante. Aquí puedes consultar tus asignaturas, verificar tu asistencia y registrar tu presencia mediante un código QR.</p>
+    </div>
+
+    <!-- Nuevos botones para asignaturas y asistencias -->
+    <ion-grid fixed>
+      <ion-row class="ion-justify-content-center ion-align-items-center">
+        <!-- Botón de "Mis Asignaturas" -->
+        <ion-col size="8" style="margin-bottom: 20px;">
+          <ion-card class="option-card" [routerLink]="['/asignaturas-alumnos']" class="custom-card">
+            <ion-card-header>
+              <ion-card-title>Mis Asignaturas</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <h3>Asignaturas</h3>
+              <ion-icon name="book" slot="start"></ion-icon>
+              Consulta tus materias aquí.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <!-- Botón de "Ver Asistencias" -->
+        <ion-col size="8" style="margin-bottom: 20px;">
+          <ion-card class="option-card" [routerLink]="['/asistencias-alumnos']" class="custom-card">
+            <ion-card-header>
+              <ion-card-title>Ver Asistencias</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <h3>Asistencias</h3>
+              <ion-icon name="checkmark-circle" slot="start"></ion-icon>
+              Revisa tu asistencia por asignatura.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <!-- Contenedor principal con elementos alineados -->
+    <ion-grid fixed>
+      <ion-row class="ion-justify-content-center ion-align-items-center">
+        
+        <!-- Botón de la cámara centrado con fondo azul y cámara negra -->
+        <ion-col size="auto" class="ion-text-center" style="margin-bottom: 20px;">
+          <ion-button (click)="openQrScanner()" color="primary" shape="round" size="large" expand="block" style="height: 100px; width: 100px;">
+            <ion-icon name="camera-outline" style="font-size: 50px; color: #000;"></ion-icon> <!-- Icono de cámara negro -->
+          </ion-button>
+        </ion-col>
+    
+        <!-- Código de asistencia -->
+        <ion-col size="8" style="margin-bottom: 20px;">
+          <ion-input
+            label="Código de asistencia"
+            label-placement="floating"
+            fill="outline"
+            placeholder="ej: SCY1011_002|24/12/2024"
+            [(ngModel)]="codigoAsistencia"
+            readonly
+          ></ion-input>
+        </ion-col>
+    
+        <!-- Botón de registrar con fondo azul y texto negro -->
+        <ion-col size="4">
+          <ion-button expand="block" fill="solid" shape="round" color="primary" (click)="registrarAsistenciaConCodigo(codigoAsistencia)" style="color: #000;">
+            Registrar
+          </ion-button>
+        </ion-col>
+    
+      </ion-row>
+    </ion-grid>
+    
+    
+  </ion-content>
+</div>

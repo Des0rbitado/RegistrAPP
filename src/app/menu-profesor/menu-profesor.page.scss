@@ -1,0 +1,117 @@
+/* Estilo global para fondo oscuro */
+ion-header {
+    --background: #1d1d1d; /* Gris aún más oscuro para la barra */
+    --color: #fff; /* Texto blanco */
+}
+
+ion-toolbar {
+    --background: #1d1d1d; /* Gris aún más oscuro para la barra */
+    --color: #fff; /* Texto blanco */
+    justify-content: center; /* Centrar los elementos dentro de la barra */
+}
+
+ion-title {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Asegurar que el logo esté centrado */
+}
+
+ion-button {
+    --background: transparent; /* Fondo transparente para el botón */
+    --color: #fff; /* Texto blanco para el botón */
+}
+
+ion-button .menu-icon {
+    color: #fff; /* Cambiar color del ícono del menú a blanco */
+}
+
+/* Estilo para el contenido */
+ion-content {
+    --background: #141414; /* Fondo ligeramente más oscuro que el anterior */
+    --color: #fff; /* Texto blanco */
+}
+
+ion-label {
+    font-size: 20px;
+    color: white;
+}
+
+ion-menu {
+    --background: #2c2c2c; /* Fondo gris oscuro del menú */
+}
+
+ion-list {
+    --background: #333; /* Fondo gris oscuro para la lista */
+}
+
+ion-item {
+    --background: #333; /* Fondo gris oscuro para los ítems */
+    --color: #fff; /* Texto blanco */
+    margin: 10px;
+}
+
+ion-item:hover {
+    --background: #444; /* Efecto hover para ítems */
+}
+
+ion-button[fill="clear"] {
+    --color: #fff; /* Texto blanco para botones claros */
+}
+
+ion-card {
+    --background: #333; /* Fondo gris oscuro para las tarjetas */
+    --color: #fff; /* Texto blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin-bottom: 20px; /* Espacio entre las tarjetas */
+    transition: transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover para las tarjetas */
+ion-card:hover {
+    transform: scale(1.05); /* Agrandar ligeramente la tarjeta */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+ion-card-header {
+    --background: #2c2c2c; /* Fondo gris más oscuro para el header */
+    border-top-left-radius: 15px; /* Bordes redondeados */
+    border-top-right-radius: 15px; /* Bordes redondeados */
+}
+
+ion-card-title {
+    color: #fff; /* Título en blanco */
+}
+
+ion-card-content {
+    padding: 15px; /* Padding adicional para el contenido */
+    font-size: 16px; /* Tamaño de fuente ligeramente mayor */
+}
+
+ion-icon {
+    color: #007bff; /* Azul suave para los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    margin-right: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.welcome-message h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el texto centrado */
+.notification-text {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: #e0e0e0; /* Gris claro */
+    margin: 20px 0;
+}

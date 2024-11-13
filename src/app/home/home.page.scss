@@ -1,0 +1,81 @@
+/* Fondo más oscuro para la barra superior y el header */
+ion-header {
+  --background: #222222; /* Gris aún más oscuro para la barra */
+  --color: #fff; /* Texto blanco */
+}
+
+ion-toolbar {
+  --background: #222222; /* Gris más oscuro para la barra */
+  --color: #fff; /* Texto blanco */
+}
+
+/* Fondo suave para todo el contenido */
+ion-content {
+  --background: #141414; /* Fondo ligeramente más oscuro que el anterior */
+  --color: #fff; /* Texto blanco */
+}
+
+/* Cuadro de selección Alumno / Profesor */
+.selection-box {
+  margin-bottom: 20px;
+}
+
+.selection-button {
+  --border-radius: 8px; /* Bordes redondeados */
+  margin: 10px;
+  font-size: 18px;
+  --background: #333; /* Fondo gris oscuro */
+  --color: #fff; /* Texto blanco */
+}
+
+/* Estilo de las tarjetas de login */
+.login-card {
+  --background: #2c2c2c; /* Fondo gris oscuro para las tarjetas de login */
+  --color: #fff;
+}
+
+.login-card ion-card-header {
+  --background: #2c2c2c; /* Fondo gris oscuro en los headers de las tarjetas */
+}
+
+.login-card ion-button {
+  --background: #007bff; /* Azul suave para los botones */
+  --color: #fff; /* Texto blanco */
+}
+
+/* Colores de los botones */
+ion-button[ng-reflect-color="primary"] {
+  --background: #007bff; /* Azul suave */
+  --color: #fff; /* Texto blanco */
+}
+
+ion-button[ng-reflect-color="dark"] {
+  --background: #444; /* Gris oscuro para los botones no seleccionados */
+  --color: #fff; /* Texto blanco */
+}
+
+ion-input {
+  --background: #333; /* Fondo gris oscuro para los inputs */
+  --color: #fff; /* Texto blanco en los inputs */
+  --placeholder-color: #aaa; /* Color de los placeholders */
+  margin-bottom: 15px; /* Separación entre los inputs */
+  padding: 10px; /* Espaciado interno */
+  border-radius: 5px; /* Bordes redondeados */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+ion-input .native-input {
+  text-align: left; /* Asegura que el texto del input se alinee a la izquierda */
+}
+
+
+/* Botones y fondos de secciones */
+ion-segment-button {
+  --background: #333; /* Fondo oscuro para los botones de selección */
+  --color: #fff; /* Texto blanco */
+}
+
+ion-segment-button.activated {
+  --background: #007bff; /* Azul suave para el botón seleccionado */
+  --color: #fff; /* Texto blanco */
+}
